@@ -1,0 +1,15 @@
+/home/ahmed/RiderProjects/testForChess/Chess/bin/Debug/net8.0/Chess
+/home/ahmed/RiderProjects/testForChess/Chess/bin/Debug/net8.0/Chess.deps.json
+/home/ahmed/RiderProjects/testForChess/Chess/bin/Debug/net8.0/Chess.runtimeconfig.json
+/home/ahmed/RiderProjects/testForChess/Chess/bin/Debug/net8.0/Chess.dll
+/home/ahmed/RiderProjects/testForChess/Chess/bin/Debug/net8.0/Chess.pdb
+/home/ahmed/RiderProjects/testForChess/Chess/obj/Debug/net8.0/Chess.GeneratedMSBuildEditorConfig.editorconfig
+/home/ahmed/RiderProjects/testForChess/Chess/obj/Debug/net8.0/Chess.AssemblyInfoInputs.cache
+/home/ahmed/RiderProjects/testForChess/Chess/obj/Debug/net8.0/Chess.AssemblyInfo.cs
+/home/ahmed/RiderProjects/testForChess/Chess/obj/Debug/net8.0/Chess.csproj.CoreCompileInputs.cache
+/home/ahmed/RiderProjects/testForChess/Chess/obj/Debug/net8.0/Chess.sourcelink.json
+/home/ahmed/RiderProjects/testForChess/Chess/obj/Debug/net8.0/Chess.dll
+/home/ahmed/RiderProjects/testForChess/Chess/obj/Debug/net8.0/refint/Chess.dll
+/home/ahmed/RiderProjects/testForChess/Chess/obj/Debug/net8.0/Chess.pdb
+/home/ahmed/RiderProjects/testForChess/Chess/obj/Debug/net8.0/Chess.genruntimeconfig.cache
+/home/ahmed/RiderProjects/testForChess/Chess/obj/Debug/net8.0/ref/Chess.dll
