@@ -6,7 +6,7 @@ using Chess.Pieces;
 using static System.Console;
 using static Chess.Helpers.Print;
 using static Chess.Helpers.MovesValidator;
-using static Chess.Helpers.Errors;
+using static Chess.Helpers.ErrorMessages;
 
 namespace Chess.GameClass;
 
@@ -29,27 +29,37 @@ public class Game
 
     }
     
+    
     public void Run()
     {
         bool turn = true;
         byte player = 1;
-
-     
         
         while (true)
         {
-            
-            if(turn)
-                PrintBoard(board , ate1 , ate2);
-
-            else
-                PrintRotatedBoard(board , ate1 , ate2);
 
             if (turn)
+            {
+                PrintBoard(board , ate1 , ate2);
+                
                 player = 1;
+            }
+
             else
+            {
+                PrintRotatedBoard(board , ate1 , ate2);
+                
                 player = 2;
-            
+            }
+
+
+            var ValidMoves = GenerateValidMoves.ValidMovesInTurn(player, board);
+
+            if (ValidMoves.Count == 0)
+            {
+                CheckmateMessage();
+                return;
+            }
 
             Point from , to ;
             string[] line = ReadLine().Split(" ");
@@ -62,25 +72,34 @@ public class Game
 
             if (OutBounds(from, to))
             {
-                OutOfBounds();
+                OutOfBoundsMessage();
                 continue;
             }
 
             if (!IsMine(player, board[from.x, from.y]))
             {
-                InvalidSelect();
+                InvalidSelectMessage();
                 continue;
             }
 
             if (IsMine(player, board[to.x, to.y]))
             {
-                InvalidMove();
+                InvalidMoveMessage();
+                continue;
+            }
+            
+            var theMove = new Tuple<Point,Point>(from , to);
+
+            if (!ValidMoves.Contains(theMove))
+            {
+                WriteLine("not valid move yasta ");
+                
                 continue;
             }
 
             if (!MovePiece.MovePice(from, to, board, ate1, ate2))
             {
-                InvalidMove();
+                InvalidMoveMessage();
                 continue;
             }
 

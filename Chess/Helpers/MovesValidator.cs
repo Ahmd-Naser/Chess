@@ -11,6 +11,10 @@ public class MovesValidator
                from.y >= 1 && from.y <= 8 && to.y >= 1 && to.y <= 8 );
     }
 
+    public static bool OutBounds(Point current)
+    {
+        return !(current.x >= 1 && current.x<= 8 && current.y >=1 && current.y<=8 );
+    }
     public static bool OutBounds(int i , int j)
     {
         return !(i >= 1 && i <= 8 && j >= 1 && j <= 8);

@@ -10,24 +10,16 @@ public class MovePiece
     {
         var symbol = board[from.x, from.y].Symbol;
 
-        if (symbol == '♙')
-            return MovePawn.Move(from, to, board, ate1, ate2);
+        return symbol switch
+        {
+            '♙' => MovePawn.Move(from, to, board, ate1, ate2) ,
+            '♔' => MoveKing.Move(from, to, board, ate1, ate2) ,
+            '♕' => MoveQueen.Move(from, to, board, ate1, ate2) ,
+            '♗' => MoveBishop.Move(from, to, board, ate1, ate2) ,
+            '♘' => MoveKnight.Move(from, to, board, ate1, ate2) ,
+            '♖' => MoveRock.Move(from, to, board, ate1, ate2) ,
+            _ => false
+        };
 
-        if (symbol == '♔')
-            return MoveKing.Move(from, to, board, ate1, ate2);
-
-        if (symbol == '♕')
-            return MoveQueen.Move(from, to, board, ate1, ate2);
-
-        if (symbol == '♗')
-            return MoveBishop.Move(from, to, board, ate1, ate2);
-
-        if (symbol == '♘')
-            return MoveKnight.Move(from, to, board, ate1, ate2);
-
-        if (symbol == '♖')
-            return MoveRock.Move(from, to, board, ate1, ate2);
-        
-        return false;
     }
 }
