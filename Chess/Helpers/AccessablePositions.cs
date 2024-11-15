@@ -26,12 +26,13 @@ public static class AccessablePositions
         {
             for (int j = 1; j <= 8; j++)
             {
-                if (board[i, j].Player == player)
-                {
-                    var accessablePlaces = accessablePoints(new Point(i, j), purpose ,  board);
-                    
-                    addListToHashSet(accessablePlaces , ref result);
-                }
+                if (board[i, j].Player != player)
+                    continue;
+                
+                var accessablePlaces = accessablePoints(new Point(i, j), purpose ,  board);
+                
+                addListToHashSet(accessablePlaces , ref result);
+                
             }
         }
 
@@ -50,12 +51,12 @@ public static class AccessablePositions
 
         return symbol switch
         {
-            '♙' => (purpose == (int)Purpose.forThreate) ? PawnForThreate(current , board) : PawnForMove(current , board),
-            '♔' => King(current , board),
-            '♕' => Queen(current , board),
-            '♗' => Bishop(current , board),
-            '♘' => Knight(current , board),
-            '♖' => Rook(current , board),
+            (char)PieceSymbol.Pawn => (purpose == (int)Purpose.forThreate) ? PawnForThreate(current , board) : PawnForMove(current , board),
+            (char)PieceSymbol.King => King(current , board),
+            (char)PieceSymbol.Queen => Queen(current , board),
+            (char)PieceSymbol.Bishop => Bishop(current , board),
+            (char)PieceSymbol.Knight => Knight(current , board),
+            (char)PieceSymbol.Rook => Rook(current , board),
             _ => new()
             
         };

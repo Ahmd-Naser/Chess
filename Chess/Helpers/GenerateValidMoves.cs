@@ -14,19 +14,21 @@ public class GenerateValidMoves
         {
             for (int j = 1; j <= 8; j++)
             {
-                if (board[i, j].Player == player)
-                {
-                    var current = new Point(i, j);
-                    
-                    var accessableMoves = AccessablePositions.GetAllForOnePosition( current , (int)Purpose.forMove, board);
+                if (board[i, j].Player != player)
+                    continue;
+                
+                
+                var current = new Point(i, j);
+                
+                var accessableMoves = AccessablePositions.GetAllForOnePosition( current , (int)Purpose.forMove, board);
 
-                    if (accessableMoves.Count > 0)
-                    {
-                        var validMovesList = validMoves(current, accessableMoves , board);
-                        addValidMovesToAnswer(current, validMovesList, result);
-                        
-                    }
+                if (accessableMoves.Count > 0)
+                {
+                    var validMovesList = validMoves(current, accessableMoves , board);
+                    addValidMovesToAnswer(current, validMovesList, result);
+                    
                 }
+                
             }
         }
 
@@ -76,9 +78,8 @@ public class GenerateValidMoves
             for (int j = 1; j <= 8; j++)
             {
                 if (board[i, j].Symbol == (char)PieceSymbol.King)
-                {
                     return new(i, j);
-                }
+                
             }
         }
 

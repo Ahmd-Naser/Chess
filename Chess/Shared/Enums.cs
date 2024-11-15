@@ -10,7 +10,7 @@ public class Enums
     
     public enum PieceSymbol
     {
-        Pwan = '♙',
+        Pawn = '♙',
         King = '♔',
         Queen = '♕',
         Bishop = '♗' ,
