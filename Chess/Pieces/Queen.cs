@@ -5,16 +5,10 @@ namespace Chess.Pieces;
 
 public class Queen : Cell
 {
-
-    public Queen()
-    {
-        Symbol = '♕';
-    }
-
     public Queen(byte player)
     {
         Player = player;
-        Symbol = '♕';
+        Symbol = (char)PieceSympol.Queen;
     }
     
 }

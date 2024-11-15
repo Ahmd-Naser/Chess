@@ -15,6 +15,7 @@ public class Enums
         Queen = '♕',
         Bishop = '♗' ,
         Knight = '♘' ,
-        Rook = '♖'
+        Rook = '♖',
+        Empty = 'E'
     }
 }

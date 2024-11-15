@@ -10,7 +10,7 @@ public static class AccessablePositions
 
     public static List<Point> GetAllForOnePosition(Point current , int purpose, Cell[,] board)
     {
-        if (Chess.Helpers.MovesValidator.OutBounds(current))
+        if (OutBounds(current))
             return null;
         
         var accessablePlaces = accessablePoints(current, purpose ,  board);
