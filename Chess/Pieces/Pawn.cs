@@ -8,7 +8,7 @@ public class Pawn : Cell
     public Pawn(byte player)
     {
         Player = player;
-        Symbol = (char)PieceSympol.Pwan;
+        Symbol = (char)PieceSymbol.Pwan;
     }
    
 }

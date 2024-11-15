@@ -9,7 +9,7 @@ public class Rook : Cell
     public Rook(byte player)
     {
         Player = player;
-        Symbol = (char)PieceSympol.Rook;
+        Symbol = (char)PieceSymbol.Rook;
     }
     
 }

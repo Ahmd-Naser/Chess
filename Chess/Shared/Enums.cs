@@ -8,7 +8,7 @@ public class Enums
         forThreate
     }
     
-    public enum PieceSympol
+    public enum PieceSymbol
     {
         Pwan = '♙',
         King = '♔',

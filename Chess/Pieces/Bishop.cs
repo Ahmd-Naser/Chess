@@ -8,7 +8,7 @@ public class Bishop : Cell
     public Bishop(byte player)
     {
         Player = player;
-        Symbol = (char)PieceSympol.Bishop;
+        Symbol = (char)PieceSymbol.Bishop;
     }
     
 }

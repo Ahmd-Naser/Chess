@@ -1,6 +1,6 @@
 using Chess.Abstract;
 using static Chess.Helpers.Operations;
-using static Chess.Shared.Enums.PieceSympol;
+using static Chess.Shared.Enums.PieceSymbol;
 
 namespace Chess.Helpers;
 
@@ -75,7 +75,7 @@ public class GenerateValidMoves
         {
             for (int j = 1; j <= 8; j++)
             {
-                if (board[i, j].Symbol == (char)PieceSympol.King)
+                if (board[i, j].Symbol == (char)PieceSymbol.King)
                 {
                     return new(i, j);
                 }

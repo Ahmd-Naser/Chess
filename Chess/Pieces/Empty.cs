@@ -7,7 +7,7 @@ public class Empty : Cell
 {
     public Empty()
     {
-        Symbol = (char)PieceSympol.Empty;
+        Symbol = (char)PieceSymbol.Empty;
     }
     
 }

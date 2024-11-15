@@ -8,7 +8,7 @@ public class King : Cell
     public King(byte player)
     {
         Player = player;
-        Symbol = (char)PieceSympol.King;
+        Symbol = (char)PieceSymbol.King;
     }
    
 }
