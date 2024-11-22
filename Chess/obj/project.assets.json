@@ -19,6 +19,7 @@
       "packagesPath": "/home/ahmed/.nuget/packages/",
       "outputPath": "/home/ahmed/RiderProjects/testForChess/Chess/obj/",
       "projectStyle": "PackageReference",
+      "UsingMicrosoftNETSdk": false,
       "configFilePaths": [
         "/home/ahmed/.nuget/NuGet/NuGet.Config"
       ],

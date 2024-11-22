@@ -36,9 +36,12 @@ public class Print
         
         printAte(ate1 , ate2);
         
-        
+        WriteLine("-----------------------------------------");
+
         for (int i = 0; i < 10; i++)
         {
+            Write("| ");
+
             for (int j = 0; j < 10; j++)
             {
                 if (board[i, j] is not null)
@@ -66,7 +69,7 @@ public class Print
             }
             
             WriteLine();
-            WriteLine("--------------------------------");
+            WriteLine("-----------------------------------------");
             // WriteLine();
 
         }

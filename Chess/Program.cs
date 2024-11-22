@@ -4,7 +4,6 @@ using Chess.Helpers;
 using static System.Console;
 
 namespace Chess;
-
 class Program
 {
     static void Main(string[] args)
